@@ -3,10 +3,9 @@
 $altura = $_POST['altura'];
 $peso = $_POST['peso'];
 
+
 $imc = $peso / $altura ** 2;
 $imc = sprintf("%.2f", $imc);
-
-$resultado = $imc . PHP_EOL;
 
 
 if ($imc < 18.5) {
@@ -28,8 +27,8 @@ else {
     $resultado2 = "Obesidade classe III";
 }
 
-include 'index.php';
-
+header("Location: index.php?imc=$imc&resultado2=$resultado2");
+exit();
 
 ?>
 

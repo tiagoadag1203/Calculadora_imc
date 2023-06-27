@@ -1,3 +1,10 @@
+<?php
+
+$imc = null;
+$resultado2 = '';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +25,14 @@
             <input type="text" id="peso" name="peso">
             <input type="submit" value="Calcular" class="btn">
         </form>
+        <?php
+        if (isset($_GET['imc']) && isset($_GET['resultado2'])) {
+            $imc = $_GET['imc'];
+            $resultado2 = $_GET['resultado2'];
+        }
+        ?>
         <h3>IMC:</h3>
-        <?php echo $resultado; ?>
+        <?php echo $imc; ?>
         <h3>Situação:</h3>
         <?php echo $resultado2; ?>
     </div>
