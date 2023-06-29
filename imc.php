@@ -4,8 +4,12 @@ $altura = $_POST['altura'];
 $peso = $_POST['peso'];
 
 
-$imc = $peso / $altura ** 2;
-$imc = sprintf("%.2f", $imc);
+function imc ($altura, $peso){
+    $imc = $peso / $altura ** 2;
+    return $imc;
+}
+
+$imc = imc ($altura, $peso);
 
 
 if ($imc < 18.5) {

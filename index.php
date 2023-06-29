@@ -1,10 +1,3 @@
-<?php
-
-$imc = null;
-$resultado2 = '';
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,8 +22,12 @@ $resultado2 = '';
         if (isset($_GET['imc']) && isset($_GET['resultado2'])) {
             $imc = $_GET['imc'];
             $resultado2 = $_GET['resultado2'];
+        } else {
+            $imc = null;
+            $resultado2 = null;
         }
         ?>
+
         <h3>IMC:</h3>
         <?php echo $imc; ?>
         <h3>Situação:</h3>
