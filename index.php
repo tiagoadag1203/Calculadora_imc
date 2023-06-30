@@ -29,9 +29,9 @@
         ?>
 
         <h3>IMC:</h3>
-        <?php echo $imc; ?>
+        <?= $imc; ?>
         <h3>Situação:</h3>
-        <?php echo $resultado2; ?>
+        <?= $resultado2; ?>
     </div>
 </body>
 

@@ -6,7 +6,8 @@ $peso = $_POST['peso'];
 
 function imc ($altura, $peso){
     $imc = $peso / $altura ** 2;
-    return $imc;
+    $imc_formatado = number_format($imc, 2);
+    return $imc_formatado;
 }
 
 $imc = imc ($altura, $peso);
