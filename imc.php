@@ -1,5 +1,6 @@
 <?php
 
+$nome = $_POST ['nome'];
 $altura = $_POST['altura'];
 $peso = $_POST['peso'];
 
@@ -31,6 +32,8 @@ else if ($imc >= 35 && $imc <= 39.9) {
 else {
     $resultado2 = "Obesidade classe III";
 }
+
+include ('armazenar.php');
 
 header("Location: index.php?imc=$imc&resultado2=$resultado2");
 exit();

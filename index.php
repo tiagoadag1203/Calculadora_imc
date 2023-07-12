@@ -11,13 +11,16 @@
 <body>
     <div class="calculadora">
         <h1>Calcular IMC</h1>
-        <form action="imc.php" method="post">
+        <form action="imc.php" method="POST">
+            <label for="altura">Nome</label>
+            <input type="text" id="nome" name="nome">
             <label for="altura">Altura (metros)</label>
             <input type="text" id="altura" name="altura">
             <label for="peso">Peso (Kg)</label>
             <input type="text" id="peso" name="peso">
-            <input type="submit" value="Calcular" class="btn">
+            <input type="submit" name="submit" value="Calcular" class="btn">
         </form>
+
         <?php
         if (isset($_GET['imc']) && isset($_GET['resultado2'])) {
             $imc = $_GET['imc'];
