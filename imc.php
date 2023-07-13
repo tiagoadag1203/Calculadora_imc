@@ -1,10 +1,5 @@
 <?php
 
-$nome = $_POST ['nome'];
-$altura = $_POST['altura'];
-$peso = $_POST['peso'];
-
-
 function imc ($altura, $peso){
     $imc = $peso / $altura ** 2;
     $imc_formatado = number_format($imc, 2);
@@ -15,27 +10,27 @@ $imc = imc ($altura, $peso);
 
 
 if ($imc < 18.5) {
-    $resultado2 = "Abaixo do peso";
+    $resultado = "Abaixo do peso";
 }
 else if ($imc >= 18.5 && $imc <= 24.9) {
-    $resultado2 = "Peso normal";
+    $resultado = "Peso normal";
 }
 else if ($imc >= 15 && $imc <= 29.9) {
-    $resultado2 = "Excesso de peso";
+    $resultado = "Excesso de peso";
 }
 else if ($imc >= 30 && $imc <= 34.9) {
-    $resultado2 = "Obesidade classe I";
+    $resultado = "Obesidade classe I";
 }
 else if ($imc >= 35 && $imc <= 39.9) {
-    $resultado2 = "Obesidade classe II";
+    $resultado = "Obesidade classe II";
 }
 else {
-    $resultado2 = "Obesidade classe III";
+    $resultado = "Obesidade classe III";
 }
 
 include ('armazenar.php');
 
-header("Location: index.php?imc=$imc&resultado2=$resultado2");
+header("Location: index.php?imc=$imc&resultado=$resultado");
 exit();
 
 ?>

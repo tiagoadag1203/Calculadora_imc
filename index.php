@@ -11,7 +11,7 @@
 <body>
     <div class="calculadora">
         <h1>Calcular IMC</h1>
-        <form action="imc.php" method="POST">
+        <form action="dados.php" method="POST">
             <label for="altura">Nome</label>
             <input type="text" id="nome" name="nome">
             <label for="altura">Altura (metros)</label>
@@ -22,19 +22,19 @@
         </form>
 
         <?php
-        if (isset($_GET['imc']) && isset($_GET['resultado2'])) {
+        if (isset($_GET['imc']) && isset($_GET['resultado'])) {
             $imc = $_GET['imc'];
-            $resultado2 = $_GET['resultado2'];
+            $resultado = $_GET['resultado'];
         } else {
             $imc = null;
-            $resultado2 = null;
+            $resultado = null;
         }
         ?>
 
         <h3>IMC:</h3>
         <?= $imc; ?>
         <h3>Situação:</h3>
-        <?= $resultado2; ?>
+        <?= $resultado; ?>
     </div>
 </body>
 
